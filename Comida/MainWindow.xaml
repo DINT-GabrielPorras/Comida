@@ -6,6 +6,26 @@
         xmlns:local="clr-namespace:Comida"
         mc:Ignorable="d"
         Title="Comida" Height="700" Width="950" MinHeight="500" MinWidth="650" Background="LightSkyBlue">
+
+    <Window.Resources>
+        <DataTemplate x:Key="plantillaPlatos">
+            <StackPanel>
+                <TextBlock Text="{Binding PlatoSeleccionado.Nombre}"/>
+                <Image Source="{Binding PlatoSeleccionado.Imagen}"/>
+                <DockPanel LastChildFill="True">
+                    <Image DockPanel.Dock="Left"
+                           Source="{Binding PlatoSeleccionado.Gluten}"/>
+                    <Image DockPanel.Dock="Left"
+                           Source="{Binding PlatoSeleccionado.Leche}"/>
+                    <Image DockPanel.Dock="Left"
+                           Source="{Binding PlatoSeleccionado.Sulfitos}"/>
+                    <Image DockPanel.Dock="Left"
+                           Source="{Binding PlatoSeleccionado.Soja}"/>
+                </DockPanel>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    
     <Border BorderBrush="Black" BorderThickness="1" Background="White" Margin="10">
         <DockPanel LastChildFill="True">
             <StackPanel DockPanel.Dock="Right" Width="280" Background="LightGray" Margin="5,10,15,5">
@@ -28,7 +48,24 @@
             <Border BorderBrush="Gray" BorderThickness="1" Margin="10,10,10,5">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                     <WrapPanel>
-
+                        <ListBox ItemsSource="{Binding Path=ListaPlatos}"
+                                 SelectedItem="{Binding Path=PlatoSeleccionado}"
+                                 ItemTemplate="{StaticResource plantillaPlatos}"/>
+                        <ListBox ItemsSource="{Binding Path=ListaPlatos}"
+                                 SelectedItem="{Binding Path=PlatoSeleccionado}"
+                                 ItemTemplate="{StaticResource plantillaPlatos}"/>
+                        <ListBox ItemsSource="{Binding Path=ListaPlatos}"
+                                 SelectedItem="{Binding Path=PlatoSeleccionado}"
+                                 ItemTemplate="{StaticResource plantillaPlatos}"/>
+                        <ListBox ItemsSource="{Binding Path=ListaPlatos}"
+                                 SelectedItem="{Binding Path=PlatoSeleccionado}"
+                                 ItemTemplate="{StaticResource plantillaPlatos}"/>
+                        <ListBox ItemsSource="{Binding Path=ListaPlatos}"
+                                 SelectedItem="{Binding Path=PlatoSeleccionado}"
+                                 ItemTemplate="{StaticResource plantillaPlatos}"/>
+                        <ListBox ItemsSource="{Binding Path=ListaPlatos}"
+                                 SelectedItem="{Binding Path=PlatoSeleccionado}"
+                                 ItemTemplate="{StaticResource plantillaPlatos}"/>
                     </WrapPanel>
                 </ScrollViewer>
             </Border>
