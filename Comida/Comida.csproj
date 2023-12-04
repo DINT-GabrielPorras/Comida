@@ -9,7 +9,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="recursos\FotosPlatos\burguer.jpg" />
+    <None Remove="recursos\FotosPlatos\cerdoagridulce.jpg" />
+    <None Remove="recursos\FotosPlatos\dumplings.jpg" />
+    <None Remove="recursos\FotosPlatos\fajitas.jpg" />
+    <None Remove="recursos\FotosPlatos\hotdog.jpg" />
+    <None Remove="recursos\FotosPlatos\tacos.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="recursos\fruit_food_apple.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="recursos\FotosPlatos\burguer.jpg" />
+    <Resource Include="recursos\FotosPlatos\cerdoagridulce.jpg" />
+    <Resource Include="recursos\FotosPlatos\dumplings.jpg" />
+    <Resource Include="recursos\FotosPlatos\fajitas.jpg" />
+    <Resource Include="recursos\FotosPlatos\hotdog.jpg" />
+    <Resource Include="recursos\FotosPlatos\tacos.jpg" />
   </ItemGroup>
 
 </Project>

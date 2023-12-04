@@ -9,19 +9,16 @@
 
     <Window.Resources>
         <DataTemplate x:Key="plantillaPlatos">
-            <StackPanel>
-                <TextBlock Text="{Binding PlatoSeleccionado.Nombre}"/>
-                <Image Source="{Binding PlatoSeleccionado.Imagen}"/>
-                <DockPanel LastChildFill="True">
-                    <Image DockPanel.Dock="Left"
-                           Source="{Binding PlatoSeleccionado.Gluten}"/>
-                    <Image DockPanel.Dock="Left"
-                           Source="{Binding PlatoSeleccionado.Leche}"/>
-                    <Image DockPanel.Dock="Left"
-                           Source="{Binding PlatoSeleccionado.Sulfitos}"/>
-                    <Image DockPanel.Dock="Left"
-                           Source="{Binding PlatoSeleccionado.Soja}"/>
-                </DockPanel>
+            <StackPanel Width="250" Height="250">
+                <TextBlock Text="{Binding Path=Nombre}"/>
+                <Image Source="{Binding Path=Imagen}"/>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="{Binding Path=Tipo}"/>
+                    <Image Source="{Binding Path=Gluten}"/>
+                    <Image Source="{Binding Path=Leche}"/>
+                    <Image Source="{Binding Path=Sulfitos}"/>
+                    <Image Source="{Binding Path=Soja}"/>
+                </StackPanel>
             </StackPanel>
         </DataTemplate>
     </Window.Resources>
@@ -46,29 +43,20 @@
                 <Button Content="Limpiar selección" IsEnabled="False" HorizontalAlignment="Left" Width="125" Margin="10"/>
             </StackPanel>
             <Border BorderBrush="Gray" BorderThickness="1" Margin="10,10,10,5">
-                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-                    <WrapPanel>
-                        <ListBox ItemsSource="{Binding Path=ListaPlatos}"
-                                 SelectedItem="{Binding Path=PlatoSeleccionado}"
-                                 ItemTemplate="{StaticResource plantillaPlatos}"/>
-                        <ListBox ItemsSource="{Binding Path=ListaPlatos}"
-                                 SelectedItem="{Binding Path=PlatoSeleccionado}"
-                                 ItemTemplate="{StaticResource plantillaPlatos}"/>
-                        <ListBox ItemsSource="{Binding Path=ListaPlatos}"
-                                 SelectedItem="{Binding Path=PlatoSeleccionado}"
-                                 ItemTemplate="{StaticResource plantillaPlatos}"/>
-                        <ListBox ItemsSource="{Binding Path=ListaPlatos}"
-                                 SelectedItem="{Binding Path=PlatoSeleccionado}"
-                                 ItemTemplate="{StaticResource plantillaPlatos}"/>
-                        <ListBox ItemsSource="{Binding Path=ListaPlatos}"
-                                 SelectedItem="{Binding Path=PlatoSeleccionado}"
-                                 ItemTemplate="{StaticResource plantillaPlatos}"/>
-                        <ListBox ItemsSource="{Binding Path=ListaPlatos}"
-                                 SelectedItem="{Binding Path=PlatoSeleccionado}"
-                                 ItemTemplate="{StaticResource plantillaPlatos}"/>
-                    </WrapPanel>
-                </ScrollViewer>
-            </Border>
+                <ListBox 
+                        ItemsSource="{Binding Path=ListaPlatos}"
+                        SelectedItem="{Binding Path=PlatoSeleccionado}"
+                        ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                        ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                        ItemTemplate="{StaticResource plantillaPlatos}"
+                        >
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel />
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                    </ListBox>
+                </Border>
         </DockPanel>
     </Border>
 </Window>
