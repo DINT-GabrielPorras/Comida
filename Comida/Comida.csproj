@@ -9,25 +9,49 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="recursos\china.png" />
+    <None Remove="recursos\ChineseWokFoodSt-lGoZ.ttf" />
     <None Remove="recursos\FotosPlatos\burguer.jpg" />
     <None Remove="recursos\FotosPlatos\cerdoagridulce.jpg" />
     <None Remove="recursos\FotosPlatos\dumplings.jpg" />
     <None Remove="recursos\FotosPlatos\fajitas.jpg" />
     <None Remove="recursos\FotosPlatos\hotdog.jpg" />
     <None Remove="recursos\FotosPlatos\tacos.jpg" />
+    <None Remove="recursos\gluten.png" />
+    <None Remove="recursos\mexico.png" />
+    <None Remove="recursos\milk.png" />
+    <None Remove="recursos\Slim Summer.otf" />
+    <None Remove="recursos\soybean.png" />
+    <None Remove="recursos\sulfide.png" />
+    <None Remove="recursos\TacoSalad-vmWM.ttf" />
+    <None Remove="recursos\united_states.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="recursos\fruit_food_apple.ico" />
+    <Resource Include="recursos\fruit_food_apple.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="recursos\china.png" />
+    <Resource Include="recursos\ChineseWokFoodSt-lGoZ.ttf" />
     <Resource Include="recursos\FotosPlatos\burguer.jpg" />
     <Resource Include="recursos\FotosPlatos\cerdoagridulce.jpg" />
     <Resource Include="recursos\FotosPlatos\dumplings.jpg" />
     <Resource Include="recursos\FotosPlatos\fajitas.jpg" />
     <Resource Include="recursos\FotosPlatos\hotdog.jpg" />
     <Resource Include="recursos\FotosPlatos\tacos.jpg" />
+    <Resource Include="recursos\gluten.png" />
+    <Resource Include="recursos\mexico.png" />
+    <Resource Include="recursos\milk.png" />
+    <Resource Include="recursos\Slim Summer.otf" />
+    <Resource Include="recursos\soybean.png" />
+    <Resource Include="recursos\sulfide.png" />
+    <Resource Include="recursos\TacoSalad-vmWM.ttf" />
+    <Resource Include="recursos\united_states.png" />
   </ItemGroup>
 
 </Project>

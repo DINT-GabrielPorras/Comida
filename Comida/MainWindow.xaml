@@ -9,17 +9,22 @@
 
     <Window.Resources>
         <DataTemplate x:Key="plantillaPlatos">
-            <StackPanel Width="250" Height="250">
-                <TextBlock Text="{Binding Path=Nombre}"/>
-                <Image Source="{Binding Path=Imagen}"/>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="{Binding Path=Tipo}"/>
-                    <Image Source="{Binding Path=Gluten}"/>
-                    <Image Source="{Binding Path=Leche}"/>
-                    <Image Source="{Binding Path=Sulfitos}"/>
-                    <Image Source="{Binding Path=Soja}"/>
+            <Border BorderBrush="Black" BorderThickness="1" Background="AliceBlue">
+                <StackPanel Width="250" Height="300">
+                    <TextBlock Text="{Binding Path=Nombre}"/>
+                    <Image Source="{Binding Path=Imagen}" Width="200" Height="200"/>
+                    <DockPanel LastChildFill="False">
+                        <Image DockPanel.Dock="Left" Source="{Binding Path=Tipo}"/>
+                        <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                            <!--<Image Source="{Binding Path=Gluten}"/>-->
+                            <Image Source="recursos/gluten.png" Visibility="Visible"/>
+                            <Image Source="{Binding Path=Leche}"/>
+                            <Image Source="{Binding Path=Sulfitos}"/>
+                            <Image Source="{Binding Path=Soja}"/>
+                        </StackPanel>
+                    </DockPanel>
                 </StackPanel>
-            </StackPanel>
+            </Border>
         </DataTemplate>
     </Window.Resources>
     
